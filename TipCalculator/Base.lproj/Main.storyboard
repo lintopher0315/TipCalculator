@@ -57,7 +57,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="g8d-cN-KZP"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="B0V-cf-XPZ">
                                 <rect key="frame" x="54" y="537" width="269" height="30"/>
@@ -65,10 +68,24 @@
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qS6-aM-J74" appends="YES" id="Ec4-PE-oh8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="EMn-Pe-Umm"/>
+                    <connections>
+                        <outlet property="billField" destination="ppL-cq-Em6" id="UoJ-2v-uua"/>
+                        <outlet property="tipLabel" destination="RNe-1n-doJ" id="MtY-Wn-s7U"/>
+                        <outlet property="totalLabel" destination="vIh-Zz-U9M" id="vbw-3d-TvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qS6-aM-J74">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="btR-sv-IdA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="285.5" y="131.5"/>
         </scene>
