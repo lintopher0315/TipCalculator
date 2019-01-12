@@ -62,9 +62,12 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="g8d-cN-KZP"/>
                                 </connections>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="B0V-cf-XPZ">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" id="B0V-cf-XPZ">
                                 <rect key="frame" x="54" y="537" width="269" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fpR-nx-caI"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +79,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="EMn-Pe-Umm"/>
                     <connections>
                         <outlet property="billField" destination="ppL-cq-Em6" id="UoJ-2v-uua"/>
+                        <outlet property="sliderField" destination="B0V-cf-XPZ" id="3yt-Ub-t1l"/>
                         <outlet property="tipLabel" destination="RNe-1n-doJ" id="MtY-Wn-s7U"/>
                         <outlet property="totalLabel" destination="vIh-Zz-U9M" id="vbw-3d-TvL"/>
                     </connections>
