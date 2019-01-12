@@ -15,10 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var sliderField: UISlider!
+    @IBOutlet weak var percentLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         billField.becomeFirstResponder()
+        billField.tintColor = UIColor.clear
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -41,6 +43,7 @@ class ViewController: UIViewController {
     @IBAction func valueChanged(_ sender: UISlider) {
         let currentValue = sender.value
         sliderField.setValue(Float(Int((currentValue+2.5)/5)*5), animated: false)
+        percentLabel.text = String(format: "%d%%", (Int((currentValue+2.5)/5)*5))
         let bill = Double(billField.text!) ?? 0
         let tip = bill * Double(sliderField.value / 100)
         let total = tip + bill
