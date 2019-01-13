@@ -51,4 +51,4 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
     
-    https://i.imgur.com/i5FnFN1.gif
+![](https://i.imgur.com/i5FnFN1.gif)
